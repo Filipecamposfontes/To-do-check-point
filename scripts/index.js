@@ -8,7 +8,7 @@ Turma: 09 Noite
 ============================================================================= */
 
 
-document.querySelector('#submit-btn-login').addEventListener('click', (reload)=> {
+document.querySelector('#submit-btn-login').addEventListener('click', reload => {
 
     /* Variaveis do formulario e captura de valores digitados */
     
