@@ -29,7 +29,7 @@ Turma: 09 Noite
   </div>
 
   <div class="right">
-    <form>
+    <form action="#">
       <div class="form-header">
         <p>To-Do App</p>
       </div>
@@ -40,10 +40,15 @@ Turma: 09 Noite
         Email:
         <input id="inputEmail" type="text">
       </label>
+
+      <div class="mensagemEmail"></div>
+
       <label>
         Senha:
         <input id="inputPassword" type="password">
       </label>
+
+      <div class="mensagem-password"></div>
 
       <button id="submit-btn-login" type="submit">Acessar</button>
 
@@ -56,8 +61,9 @@ Turma: 09 Noite
 </body>
 <footer>
    <!-- ---------------------- lógica aplicada no login JS----------------------- -->
-   <script src="/scripts/utils.js"></script>
-   <script src="/scripts/index.js"></script>
+   <script src="./scripts/index.js"></script>
+   <script src="./scripts/validacoes.js"></script>
+
 
 </footer>
 

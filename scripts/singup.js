@@ -15,12 +15,14 @@ document.querySelector('#submit-btn-login').addEventListener('click', reload => 
     let email = document.querySelector('#inputEmail').value;
     let password = document.querySelector('#inputPassword').value;
 
-    if(!validaMail(email).isValid){
-        document.querySelector(".mensagemEmail").innerHTML = validaMail(email).message;
-        return;
-    }
+    //Contas novas
 
+    let passwordContaNova = document.querySelector('#inputPasswordNovaConta').value;
+
+validaMail(email)
 validaPassword(password)
+validaPasswordNovaConta(passwordContaNova)
+
             
 
 })
