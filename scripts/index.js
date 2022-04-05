@@ -5,6 +5,8 @@ GITS: @Filipecamposfontes | @harrymobbsjunior | @JuanBarcelos | FabianaYSK | @fe
 
 Professor: IVIN Rodrigues 
 Turma: 09 Noite
+
+Documentação API: https://ctd-todo-api.herokuapp.com/#/
 ============================================================================= */
 document.querySelector('#submit-btn-login').addEventListener('click', reload => {
 
