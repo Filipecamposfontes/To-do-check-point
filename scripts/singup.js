@@ -26,7 +26,7 @@ document.querySelector('#submit-btn-create').addEventListener('click', reload =>
         lastName: lastNameReference.value,
         email: emailReference.value,
         password: passwordReference.value
-      }
+    }
 
       let requestHeaders = {
         'Content-Type': 'application/json'
@@ -44,7 +44,6 @@ document.querySelector('#submit-btn-create').addEventListener('click', reload =>
             response.json().then(
     
                 data => {
-    
                     localStorage.setItem('token', data.jwt)
     
                 }
