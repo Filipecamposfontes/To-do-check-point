@@ -36,7 +36,7 @@ buttonloginRef.addEventListener('click', event => {
      .then(response => {
          response.json().then(
              data => {
-                 localStorage.setItem('token: ', data.jwt);
+                 localStorage.setItem('token', data.jwt);
                  console.log(response.status)
                  if(response.status === 201){
                     window.location.href = './tarefas.html';

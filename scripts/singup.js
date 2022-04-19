@@ -45,7 +45,7 @@ document.querySelector('#submit-btn-create').addEventListener('click', reload =>
     
                 data => {
                     localStorage.setItem('token', data.jwt)
-    
+                    window.location.href = './tarefas.html';
                 }
     
             )
