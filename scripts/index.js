@@ -48,23 +48,22 @@ buttonloginRef.addEventListener('click', event => {
 
 
 
-/*
-document.querySelector('#submit-btn-login').addEventListener('click', reload => {
 
-    /* Variaveis do formulario e captura de valores digitados 
+// document.querySelector('#submit-btn-login').addEventListener('click', reload => {
+
+//     //Variaveis do formulario e captura de valores digitados 
     
   
-    reload.preventDefault();
+//     reload.preventDefault();
     
 
-    if(!validaMail(email).isValid){
-        document.querySelector(".mensagemEmail").innerHTML = validaMail(email).message;
-        return;
-    }
+//     if(!validaMail(email).isValid){
+//         document.querySelector(".mensagemEmail").innerHTML = validaMail(email).message;
+//         return;
+//     }
 
-validaPassword(password)
+// validaPassword(password)
             
 
 
-})
-*/
+// })
