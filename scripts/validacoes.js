@@ -51,7 +51,7 @@ else {
 
     /* Subistituir pela validação da API */
 
-    return;
+    return true;
  }  
 }  
 
