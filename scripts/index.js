@@ -8,6 +8,7 @@ Turma: 09 Noite
 
 Documentação API: https://ctd-todo-api.herokuapp.com/#/
 ============================================================================= */
+
 let buttonloginRef = document.querySelector('#submit-btn-login');
 
 buttonloginRef.addEventListener('click', event => {

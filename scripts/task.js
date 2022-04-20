@@ -202,6 +202,7 @@ function criarTarefas() {
 }
 
 // Obter uma determinada tarefa 
+
 function obterUmaTarefa() {
 
     fetch(`https://ctd-todo-api.herokuapp.com/v1/tasks/${id}`, requestConfigurationGet).then(
@@ -228,6 +229,7 @@ function obterUmaTarefa() {
 
 
 // Atualizar uma tarefa existente (True or False/ Terminada ou Pendente)
+
 function terminarTarefa(id) {
     let requestConfigurationPut = {
         method: "PUT",
@@ -291,6 +293,7 @@ function penderTarefa(id) {
 }
 
 // Apagar uma tarefa 
+
 function removerTarefa(id) {
     let requestConfigurationDelete = {
         method: "DELETE",
@@ -324,6 +327,7 @@ function removerTarefa(id) {
 }
 
 //editar tarefa
+
 function editarTarefa(id){
     let descriptionRef = document.querySelector(`#tarefa-${id} .editTask`)
     console.log(descriptionRef.value);
@@ -359,6 +363,7 @@ function editarTarefa(id){
 }
 
 //deixar form de edicao de tarefa visivel
+
 function abrirEdicao(id){
     document.querySelector(`#tarefa-${id} .editTask`).style.display = "block"
     document.querySelector(`#tarefa-${id} .lixoBotao`).style.display = "block"

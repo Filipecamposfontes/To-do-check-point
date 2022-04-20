@@ -40,7 +40,7 @@ function validaMail (email){
 
 function validaPassword (password){
 
-     //Valida Senha em branco
+     // Valida Senha em branco
 
   if(password == "") {  
     document.querySelector(".mensagem-password").innerHTML = "Campo senha vazio, por favor digite sua senha";  
