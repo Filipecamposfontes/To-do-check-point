@@ -12,14 +12,36 @@ Documentação API: https://ctd-todo-api.herokuapp.com/#/
 document.querySelector('#submit-btn-create').addEventListener('click', reload => {
 
     /* Variaveis do formulario e captura de valores digitados */
-  
+
     reload.preventDefault();
-    
+
     let firstNameReference = document.querySelector('#inputFirstName');
     let lastNameReference = document.querySelector('#inputLastName');
     let emailReference = document.querySelector('#inputEmail');
     let passwordReference = document.querySelector('#inputPassword');
     let passwordConfirmReference = document.querySelector('#inputPasswordConfirm');
+
+    let mailcheck = validaMail(emailReference.value)
+
+    if(firstNameReference.value == "" || lastNameReference.value == ""){
+        window.alert("preencha os campos de nome e sobrenome");
+        return
+    }
+
+    if(!mailcheck.isValid){
+        window.alert(mailcheck.message)
+        return
+    }
+
+    if(passwordReference.value != passwordConfirmReference.value){
+        window.alert("as senhas nao sao iguais")
+        return
+    }
+
+    if(!validaPasswordNovaConta(passwordReference.value)){
+        console.log("entrou")
+        return
+    }
 
     let info = {
         firstName: firstNameReference.value,
@@ -28,10 +50,10 @@ document.querySelector('#submit-btn-create').addEventListener('click', reload =>
         password: passwordReference.value
     }
 
-      let requestHeaders = {
+    let requestHeaders = {
         'Content-Type': 'application/json'
     }
-    
+
     let requestConfiguration = {
         method: 'POST',
         body: JSON.stringify(info),
@@ -41,19 +63,20 @@ document.querySelector('#submit-btn-create').addEventListener('click', reload =>
 
     fetch('https://ctd-todo-api.herokuapp.com/v1/users', requestConfiguration).then(
         response => {
-            response.json().then(
-    
-                data => {
-                    localStorage.setItem('token', data.jwt)
-                    window.location.href = './tarefas.html';
-                }
-    
-            )
-    
+            if (response.status === 200) {
+                response.json().then(
+                    data => {
+                        localStorage.setItem('token', data.jwt)
+                        window.location.href = './tarefas.html';
+                    }
+
+                )
+            }
+
         }
-    
+
     )
-    
+
 
     //Contas novas
     //let passwordContaNova = document.querySelector('#inputPasswordNovaConta').value;
@@ -62,5 +85,5 @@ document.querySelector('#submit-btn-create').addEventListener('click', reload =>
     //validaPassword(password)
     //validaPasswordNovaConta(passwordContaNova)
 
-            
+
 })

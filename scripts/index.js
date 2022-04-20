@@ -17,6 +17,15 @@ buttonloginRef.addEventListener('click', event => {
     let emailReference = document.querySelector('#inputEmail');
     let passwordReference = document.querySelector('#inputPassword');
     
+    let mailcheck = validaMail(emailReference.value);
+    
+    if(!mailcheck.isValid){
+        window.alert(mailcheck.message)
+        return
+    }
+    if(!validaPassword(passwordReference.value)){
+        return;
+    }
 
     let credentials = {
         email: emailReference.value,

@@ -82,6 +82,6 @@ else {
    else {  
 
     // Substituir pelo post API
-       alert("Password is correct");
+       //alert("Password is correct");
     }
 }
