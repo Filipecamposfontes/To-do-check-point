@@ -148,9 +148,13 @@ function criarTarefas() {
     event.preventDefault()
     if(novaTarefa === ""){
         Swal.fire(
-            'warning',
-            'Preencha o campo com uma tarefa',
-            'success'
+            {
+                title: 'Preencha',
+                text: "Você tem que escrever apenas uma tarefa",
+                icon: 'warning',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+            }
         )
     }
     else{
