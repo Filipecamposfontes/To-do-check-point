@@ -149,9 +149,13 @@ function criarTarefas() {
     event.preventDefault()
     if(novaTarefa === ""){
         Swal.fire(
-            'warning',
-            'Preencha o campo com uma tarefa',
-            'success'
+            {
+                title: 'Aviso',
+                text: "Você tem que escrever apenas uma tarefa",
+                icon: 'warning',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+            }
         )
     }
     else{
@@ -260,13 +264,13 @@ function terminarTarefa(id) {
         response => {
             if (response.ok) {
                 Swal.fire({
-                    title: 'Atualizar tarefa',
+                    title: 'Concluir tarefa',
                     text: "Você tem certeza",
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    confirmButtonText: 'Sim, Deixe como esta!'
+                    confirmButtonText: 'Sim, Tarefa cumprida!'
                 }).then((result) => {
                     // Validamos se o usuário confirma a ação
                     if (result.isConfirmed) {
