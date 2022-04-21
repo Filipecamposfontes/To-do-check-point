@@ -10,6 +10,7 @@ Documentação API: https://ctd-todo-api.herokuapp.com/#/
 
 ============================================================================= */
 // Obter o token do usuario = authorization = status:200 
+
 let requestConfigurationGet = {
     headers: {
         'Content-Type': 'application/json',
