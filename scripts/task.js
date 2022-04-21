@@ -149,7 +149,7 @@ function criarTarefas() {
     if(novaTarefa === ""){
         Swal.fire(
             {
-                title: 'Preencha',
+                title: 'Aviso',
                 text: "Você tem que escrever apenas uma tarefa",
                 icon: 'warning',
                 confirmButtonColor: '#3085d6',
@@ -263,13 +263,13 @@ function terminarTarefa(id) {
         response => {
             if (response.ok) {
                 Swal.fire({
-                    title: 'Atualizar tarefa',
+                    title: 'Concluir tarefa',
                     text: "Você tem certeza",
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    confirmButtonText: 'Sim, Deixe como esta!'
+                    confirmButtonText: 'Sim, Tarefa cumprida!'
                 }).then((result) => {
                     // Validamos se o usuário confirma a ação
                     if (result.isConfirmed) {
